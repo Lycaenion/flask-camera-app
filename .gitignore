@@ -1,1 +1,9 @@
 __pycache__/app.cpython-38.pyc
+
+
+views/.photos.py.swp
+views/__pycache__/photos.cpython-38.pyc
+
+# uploaded photos
+static/uploaded_photos/*.jpeg
+static/uploaded_photos/*.jpg

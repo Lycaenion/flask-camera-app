@@ -1,8 +1,16 @@
-from flask import Flask
+from flask import (
+     Flask,
+     redirect,
+     render_template,
+     url_for,
+     )
+from views.photos import photos_blueprint
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return '<p>Hello, World!</p>'
+app.register_blueprint(photos_blueprint)
 
+
+@app.route('/')
+def index():
+    return redirect(url_for('photos.read_photos'))
